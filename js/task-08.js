@@ -7,14 +7,16 @@ function onSubmit(evt) {
 
     evt.preventDefault();    
     
-    const { email, password } = evt.currentTarget.elements;
+    const {
+        elements: { email, password } } = evt.currentTarget;
 
     if (email.value === '' || password.value === '') {
         alert('Всі поля повинні бути заповнені')
+        return
     }
+   
+    console.log(`Email: ${email.value}, Password: ${password.value}`);
 
-    console.log(`Email: ${email.value}\nPassword: ${password.value}`)
-    
     evt.currentTarget.reset();  
 }
 
