@@ -8,3 +8,6 @@ console.log("Number of categories: ", ulEl.children.length, '\n\n');
 })
 
 
+
+
+

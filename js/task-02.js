@@ -9,6 +9,13 @@ const ingredients = [
 
 const ulEl = document.querySelector("#ingredients");
 
-const elements = ingredients.map(element => `<li class=${element}>${element}</li>`).join('');
+const elements = ingredients.map((element) => {  
+  const li = document.createElement("li");
+  li.textContent = element;
+  li.classList.add(element);
+  return li;
+})
 
-ulEl.insertAdjacentHTML("beforeend", elements);
+ulEl.append(...elements);
+
+
